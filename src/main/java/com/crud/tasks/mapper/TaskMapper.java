@@ -24,9 +24,14 @@ public class TaskMapper {
                 task.getContent()
         );
     }
-    public List<TaskDto> mapToTaskDtoList(final List<Task> taskList) {
+
+  public List<TaskDto> mapToTaskDtoList(final List<Task> taskList) {
         return taskList.stream()
                 .map(this::mapToTaskDto)
                 .collect(Collectors.toList());
+    /*public List<TaskDto> mapToTaskDtoList(final List<Task> taskList) {
+        return taskList.stream()
+                .map(this::mapToTaskDto)
+                .collect(Collectors.toList());*/
     }
 }
