@@ -27,7 +27,6 @@ class TrelloClientTest {
 
     @Mock
     private RestTemplate restTemplate;
-git
     @Mock
     private TrelloConfig trelloConfig;
 
