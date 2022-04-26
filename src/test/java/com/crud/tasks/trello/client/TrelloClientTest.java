@@ -78,6 +78,7 @@ class TrelloClientTest {
         );
 
         when(restTemplate.postForObject(uri, null, CreatedTrelloCard.class)).thenReturn(createdTrelloCard);
+
         // When
         CreatedTrelloCard newCard = trelloClient.createNewCard(trelloCardDto);
 
@@ -103,6 +104,6 @@ class TrelloClientTest {
          List<TrelloBoardDto> fetchedTrelloBoard = trelloClient.getTrelloBoards();
 
          //Then
-         assertEquals(fetchedTrelloBoard.size(), 0);
+         assertEquals(0, fetchedTrelloBoard.size());
      }
  }
