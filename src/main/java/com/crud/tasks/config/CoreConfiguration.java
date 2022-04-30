@@ -23,7 +23,7 @@ public class CoreConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.ant("/v1/task"))
+                .paths(PathSelectors.ant("/v1/task/**"))
                 .build();
     }
 }
